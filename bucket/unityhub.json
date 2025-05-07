@@ -1,0 +1,45 @@
+{
+    "version": "3.12.1",
+    "description": "Unity Hub. The Unity Hub is a management tool that you can use to manage all of your Unity Projects and installations.",
+    "homepage": "https://unity.com",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z",
+            "hash": "0b8e6941a6a2a7c1df68b16451e4cc7f8f633c6b5488b21a47860179fd5d8802"
+        },
+        "pre_install": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+            "Move-Item \"$dir\\`$R0\\*\" \"$dir\" -Force"
+        ],
+        "post_install": [
+            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
+            "Remove-Item \"$dir\\`$R0\" -Recurse -Force"
+        ],
+        "uninstaller": {
+            "file": "Uninstall Unity Hub.exe",
+            "args": [
+                "/S",
+                "_?=\"$dir\\.."
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://unity.com/unity-hub/release-notes",
+        "regex": "data-href=\"#([\\d.]+)"
+    },
+    "shortcuts": [
+        [
+            "Unity Hub.exe",
+            "UnityHub"
+        ]
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z"
+            }
+        }
+    }
+}

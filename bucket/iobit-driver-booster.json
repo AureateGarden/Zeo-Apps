@@ -1,0 +1,22 @@
+{
+    "version": "12.4.0",
+    "description": "Helps Updating 3,500,000+ Drivers for Both Online and Offline PC",
+    "homepage": "https://www.iobit.com/en/driver-booster.php",
+    "license": "BSD-3-Clause",
+    "url": "https://cdn.iobit.com/dl/driver_booster_setup.exe",
+    "hash": "325e0e824e9ac0b679ac96c649a1eca6eccc08299a523ce7ad19d96fe8d6a4dd",
+    "innosetup": true,
+    "extract_dir": "{App}\\{cm_AppVer}",
+    "shortcuts": [
+        [
+            "DriverBooster.exe",
+            "DriverBooster"
+        ]
+    ],
+    "checkver": {
+        "regex": "<span>V\\s+([\\d.]+)\\s+</span>"
+    },
+    "autoupdate": {
+        "url": "https://cdn.iobit.com/dl/driver_booster_setup.exe"
+    }
+}
