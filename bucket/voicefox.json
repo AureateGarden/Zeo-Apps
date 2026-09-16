@@ -5,13 +5,13 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/emoeem/voicefox/releases/download/v0.3.10/voicefox-windows-x86_64.zip",
+            "url": "https://github.com/emoeem/voicefox/releases/download/v0.3.10/voicefox-windows-x86_64.zip#/dl.7z",
             "hash": "6d70976db79869ceb02098d96fd54254ef9f269c498f3b35ac2f1fdd76a92af0"
         }
     },
     "bin": "voicefox.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/emoeem/voicefox/releases/download/v$version/voicefox-windows-x86_64.zip"
+        "url": "https://github.com/emoeem/voicefox/releases/download/v$version/voicefox-windows-x86_64.zip#/dl.7z"
     }
 }
