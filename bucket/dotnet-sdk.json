@@ -30,7 +30,7 @@
         "foreach ($item in $move_paths) {",
         "$source_path = \"$dir\\$item\"",
         "$target_path = \"$persist_dir\\$item\"",
-        "robocopy $source_path $target_path /E /MOVE /IS /IT /IM /NFL /NDL /NJH /NJS /NP /NS /NC /R:0 /W:0",
+        "robocopy $source_path $target_path /E /MOVE /IS /IT /IM /NFL /NDL /NJH /NJS /NP /NS /NC /R:0 /W:0 >nul 2>&1",
         "}"
     ],
     "persist": [
