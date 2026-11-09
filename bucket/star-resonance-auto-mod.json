@@ -30,7 +30,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/fudiyangjin/StarResonanceAutoMod/releases/download/v$version/StarResonanceAutoMod_Release_v$version.zip",
+                "url": "https://github.com/fudiyangjin/StarResonanceAutoMod/releases/download/v$version/StarResonanceAutoMod_Release_v$version.zip"
             }
         }
     }
